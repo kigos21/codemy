@@ -1,0 +1,26 @@
+/* {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+} */
+
+.navbar {
+    background: #007ACC;
+}
+
+.brand-text {
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-right: 16px;
+}

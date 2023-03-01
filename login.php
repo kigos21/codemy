@@ -23,13 +23,14 @@
     <?php include "navbar-login.html"; ?>
 
     <!-- Main -->
-    <div class="main container-md">
-        <h1 class="prompt">Login to your Codemy account</h1>
-        <input type="text" placeholder="email" class="textfield" id="emailTF">
-        <input type="password" placeholder="password" class="textfield">
-        <a href="#" id="forgot">Forgot Password?</a>
-        <button type="button" id="loginBtn">log in</button>
-        <span id="noAccount">Don't have an account? <a href="#">Sign up</a></span>
+    <div class="main container-md" style="margin-bottom: 20vh;">
+        <form action="login-script.php" method="post">
+            <h1 class="prompt">Login to your Codemy account</h1>
+            <input type="email" placeholder="email" class="textfield" id="emailTF" name="emailTF" required>
+            <input type="password" placeholder="password" class="textfield" id="passwordTF" name="passwordTF" required>
+            <input type="submit" id="loginBtn" value="log in">
+        </form>
+        <span id="noAccount">Don't have an account? <a href="signup.php">Sign up</a></span>
     </div>
 
     <?php include "footer.html" ?>

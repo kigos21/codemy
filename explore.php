@@ -33,7 +33,7 @@
                 <div class="row row-cols-1 row-cols-xxl-4 row-cols-lg-2 row-cols-md-1 g-4">
                     <div class="col">
                         <div class="card h-100">
-                            <img src="https://picsum.photos/seed/first/1600/900" class="card-img-top img-fluid" alt="...">
+                            <img src="https://picsum.photos/seed/1/1600/900" class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">The Complete Python Bootcamp</h5>
                                 <p class="card-text">Learn Python like a Professional</p>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                            <img src="https://picsum.photos/seed/second/1600/900" class="card-img-top" alt="...">
+                            <img src="https://picsum.photos/seed/2/1600/900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Web Developer Bootcamp 2023</h5>
                                 <p class="card-text">The only course you need to learn web development</p>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                            <img src="https://picsum.photos/seed/third/1600/900" class="card-img-top" alt="...">
+                            <img src="https://picsum.photos/seed/3/1600/900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Java Programming Masterclass</h5>
                                 <p class="card-text">Obtain valuable Core Java Skills</p>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                            <img src="https://picsum.photos/seed/fourth/1600/900" class="card-img-top" alt="...">
+                            <img src="https://picsum.photos/seed/4/1600/900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">The Complete iOS App Development Bootcamp</h5>
                                 <p class="card-text">Master the SwiftUI in just one Course</p>

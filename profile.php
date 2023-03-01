@@ -24,7 +24,11 @@
     <div class="main container-md text-center" style="margin-bottom: 20vh;">
         <div class="row">
             <div class="col">
-                <h1 class="prompt-main">Hello $name<name>
+                <?php
+                session_start();
+                $email = $_SESSION["email"];
+                echo "<h1 class='prompt-main'>Hello &lt;$email&gt;!<name>";
+                ?>
                 </h1>
             </div>
         </div>
@@ -32,13 +36,15 @@
             <div class="col-12 col-md-6">
                 <div class="pfp-section">
                     <span id="myLearningText">Go back to learning!</span>
-                    <button type="button" id="myLearningBtn">My Learning</button>
+                    <a href="mylearning.php"><button type="button" id="myLearningBtn">My Learning</button></a>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="pfp-section">
                     <span id="myLearningText">// WARNING: Danger Zone!</span>
-                    <button type="button" id="deleteAccBtn">Delete my Account</button>
+                    <form action="delete-acc.php" method="post">
+                        <input type="submit" id="deleteAccBtn" value="Delete my Account">
+                    </form>
                 </div>
             </div>
         </div>

@@ -22,13 +22,15 @@
     <?php include "navbar-login.html"; ?>
 
     <!-- Main -->
-    <div class="main container-md">
-        <h1 class="prompt">Sign up and start coding</h1>
-        <input type="text" placeholder="email" class="textfield" id="emailTF">
-        <input type="password" placeholder="password" class="textfield" id="password">
-        <input type="password" placeholder="confirm password" class="textfield" id="confirmPassword">
-        <button type="button" id="loginBtn">log in</button>
-        <span id="noAccount">Already have an account? <a href="#">Log in</a></span>
+    <div class="main container-md" style="margin-bottom: 20vh;">
+        <form action="signup-script.php" method="post">
+            <h1 class=" prompt">Sign up and start coding</h1>
+            <input type="email" placeholder="email" class="textfield" id="emailTF" name="emailTF" required>
+            <input type="password" placeholder="password" class="textfield" id="password" name="password" required>
+            <input type="password" placeholder="confirm password" class="textfield" id="confirmPassword" name="confirmPassword">
+            <input type="submit" id="loginBtn" value="sign up">
+        </form>
+        <span id="noAccount">Already have an account? <a href="login.php">Log in</a></span>
     </div>
 
     <?php include "footer.html" ?>

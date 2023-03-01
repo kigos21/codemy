@@ -3,24 +3,226 @@
     font-family: 'Source Code Pro', monospace;
 } */
 
+body {
+    background: #1E1E1E;
+    color: #E6F2CE;
+}
+
+a {
+    color: #DBE2EF;
+}
+
+a:hover {
+    color: #b3b9c4;
+}
+
 .navbar {
     background: #007ACC;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-img {
+    width: 41px;
+}
+
 .brand-text {
-    color: #FFFFFF;
+    color: #E6F2CE;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 28px;
 }
 
-.navbar-collapse {
-    justify-content: end;
-}
-
 .nav-link {
-    color: #FFFFFF;
+    color: #E6F2CE;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    margin-right: 16px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+#navLoginBtn {
+    font-family: 'Source Code Pro', monospace;
+    padding: 4px 16px;
+    color: #112D4E;
+    border-style: solid;
+    border-color: #112D4E;
+    border-radius: 6px;
+}
+
+#navLoginBtn:hover {
+    background-color: #d8d8d8;
+}
+
+#navSignupBtn {
+    font-family: 'Source Code Pro', monospace;
+    padding: 4px 12px;
+    color: #E6F2CE;
+    border-style: solid;
+    border-color: #112D4E;
+    background: #112D4E;
+    border-radius: 6px;
+}
+
+#navSignupBtn:hover {
+    background-color: #0b2038;
+}
+
+.textfield {
+    width: 336px;
+    height: 52px;
+    text-align: center;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #1E1E1E;
+    display: block;
+    margin: auto auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#emailTF {
+    margin-bottom: 8px;
+}
+
+#forgot {
+    font-size: 12px;
+}
+
+#loginBtn {
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+    padding: 4px 12px;
+    color: #E6F2CE;
+    border-style: solid;
+    border-color: #112D4E;
+    background: #112D4E;
+    border-radius: 6px;
+    margin: auto auto;
+    margin-top: 20px;
+    width: 336px;
+    height: 52px;
+    background: #3F72AF;
+    border: 1px solid #1E1E1E;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+#loginBtn:hover {
+    background-color: #4f8edb;
+}
+
+#noAccount {
+    font-size: 12px;
+}
+
+.footer {
+    background-color: #0f0f0f;
+}
+
+#confirmPassword {
+    margin-top: 8px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav-link:hover {
+    color: #c4ceaf;
+}
+
+.hr-line {
+    border: none;
+    height: 2px;
+    background-color: #E6F2CE;
+    margin-bottom: 8px;
+}
+
+.main {
+    padding-top: 40px;
+}
+
+.prompt-main {
+    font-size: 28px;
+    margin-bottom: 28px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.card {
+    margin: 8px 8px;
+    padding: 8px;
+}
+
+.card-body {
+    color: #1e1e1e;
+    font-size: 12px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-title {
+    font-size: 14px;
+}
+
+.addToBtn {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    padding: 8px 8px;
+    color: #E6F2CE;
+    border-style: solid;
+    border-color: #112D4E;
+    background: #112D4E;
+    border-radius: 6px;
+}
+
+.addToBtn:hover {
+    background-color: #173d68;
+}
+
+.pfp-section {
+    background: #ffffff;
+    border-radius: 6px;
+    width: 100%;
+    padding: 64px;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 12px;
+}
+
+#myLearningText {
+    color: #1E1E1E;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 12px;
+}
+
+#myLearningBtn {
+    color: #1e1e1e;
+    background-color: #23E972;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-weight: 800;
+    border-color: #1e1e1e;
+}
+
+#deleteAccBtn {
+    color: #1e1e1e;
+    background-color: #EB4F45;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-weight: 800;
+    border-color: #1e1e1e;
 }

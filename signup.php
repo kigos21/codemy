@@ -14,9 +14,25 @@
     <!-- CSS -->
     <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
+
+    <?php include "navbar-login.html"; ?>
+
+    <!-- Main -->
+    <div class="main container-md">
+        <h1 class="prompt">Sign up and start coding</h1>
+        <input type="text" placeholder="email" class="textfield" id="emailTF">
+        <input type="password" placeholder="password" class="textfield" id="password">
+        <input type="password" placeholder="confirm password" class="textfield" id="confirmPassword">
+        <button type="button" id="loginBtn">log in</button>
+        <span id="noAccount">Already have an account? <a href="#">Log in</a></span>
+    </div>
+
+    <?php include "footer.html" ?>
+
     <!-- Script for Animation -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>

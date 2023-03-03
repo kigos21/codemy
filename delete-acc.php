@@ -14,9 +14,11 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-$email = $_SESSION["email"];
+$iduser = $_SESSION["iduser"];
 
-$query = "DELETE FROM user WHERE email='$email'";
+$query = "DELETE FROM learning WHERE iduser = '$iduser'";
+$mysqli->query($query);
+$query = "DELETE FROM user WHERE iduser='$iduser'";
 if ($mysqli->query($query) === TRUE) {
     // Display a success message
     include "login.php";
@@ -27,4 +29,6 @@ if ($mysqli->query($query) === TRUE) {
 }
 
 // Close database connection
+unset($_SESSION["email"]);
+unset($_SESSION["iduser"]);
 $mysqli->close();

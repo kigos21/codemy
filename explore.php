@@ -18,7 +18,13 @@
 
 <body>
 
-    <?php include "navbar.html"; ?>
+    <?php
+
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    include "navbar.html"; ?>
 
     <!-- Main -->
     <div class="main container-md" style="margin-bottom: 20vh;">
@@ -31,46 +37,57 @@
         <div class="row justify-content-center">
             <div class="col col-md-8">
                 <div class="row row-cols-1 row-cols-xxl-4 row-cols-lg-2 row-cols-md-1 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://picsum.photos/seed/1/1600/900" class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">The Complete Python Bootcamp</h5>
-                                <p class="card-text">Learn Python like a Professional</p>
-                            </div>
-                            <button type="button" class="addToBtn">Add to My Learning</button>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://picsum.photos/seed/2/1600/900" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Web Developer Bootcamp 2023</h5>
-                                <p class="card-text">The only course you need to learn web development</p>
-                            </div>
-                            <button type="button" class="addToBtn">Add to My Learning</button>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://picsum.photos/seed/3/1600/900" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Java Programming Masterclass</h5>
-                                <p class="card-text">Obtain valuable Core Java Skills</p>
-                            </div>
-                            <button type="button" class="addToBtn">Add to My Learning</button>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://picsum.photos/seed/4/1600/900" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">The Complete iOS App Development Bootcamp</h5>
-                                <p class="card-text">Master the SwiftUI in just one Course</p>
-                            </div>
-                            <button type="button" class="addToBtn">Add to My Learning</button>
-                        </div>
-                    </div>
+                    <?php
+
+                    // establish a connection to the MySQL database
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "codemy";
+
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                    // check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    // execute the query
+                    $sql = "SELECT * FROM course";
+                    $result = mysqli_query($conn, $sql);
+
+                    // iterate through the results
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $iduser = $_SESSION["iduser"];
+                            $idcourse = $row["idcourse"];
+                            $src = $row["imglink"];
+                            $title = $row["title"];
+                            $description = $row["description"];
+                            // access the values of each row using the column names
+                            echo "<div class='col'>
+                                <div class='card h-100'>
+                                    <img src='$src' class='card-img-top img-fluid' alt='...'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title'>$title</h5>
+                                        <p class='card-text'>$description</p>
+                                    </div>
+                                    <form action='addtolearn.php' method='post'>
+                                        <input type='hidden' id='idcourse' name='idcourse' value='$idcourse'>
+                                        <input type='hidden' id='iduser' name='iduser' value='$iduser'>
+                                        <input type='submit' class='addToBtn' value='Add to My Learning'>
+                                    </form>
+                                </div>
+                            </div>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+
+                    // close the connection
+                    mysqli_close($conn);
+
+                    ?>
                 </div>
             </div>
         </div>

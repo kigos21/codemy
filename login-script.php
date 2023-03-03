@@ -27,8 +27,10 @@ $stmt->execute();
 $result = $stmt->get_result();
 if ($result->num_rows == 1) {
     // User found, start session and redirect to dashboard page
-    $_SESSION["email"] = $email;
-    header("Location: explore.php");
+    $row = mysqli_fetch_assoc($result);
+    $_SESSION["email"] = $row["email"];
+    $_SESSION["iduser"] = $row["iduser"];
+    include "explore.php";
 } else {
     // User not found, redirect back to login page with error message
     include "login.php";
